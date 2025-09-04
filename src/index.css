@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary theme colors - LinkedIn blue (#0077B5) */
+  --primary: 203 100% 36%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 196 71% 49%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 196 100% 47%;
+  --accent-foreground: 0 0% 100%;
+  
+  /* System Colors */
+  --success: 142 72% 29%;
+  --success-foreground: 210 40% 98%;
+  --success-muted: 142 72% 90%;
+  --warning: 38 92% 50%;
+  --warning-foreground: 48 96% 98%;
+  --warning-muted: 38 92% 90%;
+  --error: 0 84% 60%;
+  --error-foreground: 210 40% 98%;
+  --error-muted: 0 84% 90%;
+  --info: 196 100% 47%;
+  --info-foreground: 0 0% 100%;
+  --info-muted: 196 100% 90%;
+  
+  /* Surface Colors */
+  --surface: 0 0% 100%;
+  --surface-foreground: 0 0% 15%;
+  --surface-muted: 0 0% 96%;
+  --background: 0 0% 100%;
+  --foreground: 0 0% 15%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 15%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 15%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 45%;
+  
+  /* Color scales - Primary (LinkedIn blue) */
+  --primary-50: 203 100% 95%;
+  --primary-100: 203 100% 90%;
+  --primary-200: 203 100% 80%;
+  --primary-300: 203 100% 70%;
+  --primary-400: 203 100% 50%;
+  --primary-500: 203 100% 36%;
+  --primary-600: 203 100% 30%;
+  --primary-700: 203 100% 25%;
+  --primary-800: 203 100% 20%;
+  --primary-900: 203 100% 15%;
+  
+  /* Color scales - Secondary (Tech blue) */
+  --secondary-50: 196 71% 95%;
+  --secondary-100: 196 71% 90%;
+  --secondary-200: 196 71% 80%;
+  --secondary-300: 196 71% 70%;
+  --secondary-400: 196 71% 60%;
+  --secondary-500: 196 71% 49%;
+  --secondary-600: 196 71% 40%;
+  --secondary-700: 196 71% 30%;
+  --secondary-800: 196 71% 25%;
+  --secondary-900: 196 71% 20%;
+  
+  /* Color scales - Accent (Bright tech blue) */
+  --accent-50: 196 100% 95%;
+  --accent-100: 196 100% 90%;
+  --accent-200: 196 100% 80%;
+  --accent-300: 196 100% 70%;
+  --accent-400: 196 100% 60%;
+  --accent-500: 196 100% 47%;
+  --accent-600: 196 100% 40%;
+  --accent-700: 196 100% 30%;
+  --accent-800: 196 100% 25%;
+  --accent-900: 196 100% 20%;
+  
+  /* System Variables */
+  --border: 0 0% 90%;
+  --input: var(--border);
+  --ring: var(--primary);
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 0 0% 10%;
+  --foreground: 0 0% 95%;
+  --card: 0 0% 12%;
+  --card-foreground: 0 0% 95%;
+  --popover: 0 0% 12%;
+  --popover-foreground: 0 0% 95%;
+  --primary: 203 100% 50%;
+  --primary-foreground: 0 0% 0%;
+  --secondary: 196 71% 55%;
+  --secondary-foreground: 0 0% 0%;
+  --muted: 0 0% 20%;
+  --muted-foreground: 0 0% 70%;
+  --accent: 196 100% 55%;
+  --accent-foreground: 0 0% 0%;
+  --border: 0 0% 25%;
+  --input: 0 0% 25%;
+  --ring: 203 100% 50%;
+  --surface: 0 0% 12%;
+  --surface-foreground: 0 0% 95%;
+  --surface-muted: 0 0% 20%;
+  --success: 142 72% 50%;
+  --warning: 38 92% 60%;
+  --error: 0 84% 70%;
+  --info: 196 100% 60%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary-600 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground px-4 py-2 rounded-md hover:bg-secondary-600 transition-colors;
+  }
+  
+  .btn-outline {
+    @apply border border-primary text-primary px-4 py-2 rounded-md hover:bg-primary hover:text-primary-foreground transition-colors;
+  }
+  
+  .card-project {
+    @apply bg-card text-card-foreground rounded-lg border border-border p-6 shadow-sm hover:shadow-md transition-shadow;
+  }
+  
+  .nav-link {
+    @apply text-foreground hover:text-primary transition-colors px-3 py-2;
+  }
+  
+  .nav-link-active {
+    @apply text-primary font-medium;
+  }
+  
+  .section-heading {
+    @apply text-3xl font-bold text-foreground mb-6;
+  }
+  
+  .skill-bar {
+    @apply h-2 bg-primary-200 rounded-full overflow-hidden;
+  }
+  
+  .skill-progress {
+    @apply h-full bg-primary rounded-full;
+  }
+  
+  .timeline-item {
+    @apply border-l-2 border-primary-300 pl-4 pb-8 relative;
+  }
+  
+  .timeline-dot {
+    @apply absolute -left-[9px] w-4 h-4 rounded-full bg-primary;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .bg-grid {
+    background-size: 20px 20px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                     linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  }
+  
+  .bg-dots {
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 15s ease infinite;
+  }
+}
