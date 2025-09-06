@@ -4,7 +4,12 @@ import { ArrowLeft, Briefcase, GraduationCap, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { experiences, education } from "@/data/portfolio-data";
+import Hotjar from '@hotjar/browser';
 
+const siteId = 6513098;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId, hotjarVersion);
 const ExperiencePage = () => {
   useEffect(() => {
     document.title = "Experience | Himadri Mondal";

@@ -9,6 +9,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/components/ui/use-toast";
 import { personalInfo } from "@/data/portfolio-data";
 
+import Hotjar from '@hotjar/browser';
+
+const siteId = 6513098;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId, hotjarVersion);
+
 const ContactPage = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({

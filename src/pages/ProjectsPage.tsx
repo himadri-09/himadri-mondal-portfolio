@@ -6,7 +6,12 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { projects } from "@/data/portfolio-data";
+import Hotjar from '@hotjar/browser';
 
+const siteId = 6513098;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId, hotjarVersion);
 const ProjectsPage = () => {
   useEffect(() => {
     document.title = "Projects | Himadri Mondal";

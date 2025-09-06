@@ -1,5 +1,10 @@
 
+import Hotjar from '@hotjar/browser';
 
+const siteId = 6513098;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId, hotjarVersion);
 const Index = () => {
   return (
    <>

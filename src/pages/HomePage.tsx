@@ -4,7 +4,12 @@ import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ContactSection from "@/components/ContactSection";
+import Hotjar from '@hotjar/browser';
 
+const siteId = 6513098;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId, hotjarVersion);
 const HomePage = () => {
   useEffect(() => {
     document.title = "Himadri Mondal | AI Engineer Portfolio";
