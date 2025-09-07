@@ -4,6 +4,12 @@ import { ArrowLeft, Briefcase, GraduationCap, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { experiences, education } from "@/data/portfolio-data";
+
+import Clarity from '@microsoft/clarity';
+const projectId = "t74xpz3k3l";
+
+Clarity.init(projectId);
+
 import Hotjar from '@hotjar/browser';
 
 const siteId = 6513098;

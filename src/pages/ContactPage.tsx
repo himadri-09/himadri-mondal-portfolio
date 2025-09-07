@@ -9,6 +9,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/components/ui/use-toast";
 import { personalInfo } from "@/data/portfolio-data";
 
+import Clarity from '@microsoft/clarity';
+const projectId = "t74xpz3k3l";
+
+Clarity.init(projectId);
+
 import Hotjar from '@hotjar/browser';
 
 const siteId = 6513098;

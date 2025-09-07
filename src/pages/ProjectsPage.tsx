@@ -6,6 +6,12 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { projects } from "@/data/portfolio-data";
+
+import Clarity from '@microsoft/clarity';
+const projectId = "t74xpz3k3l";
+
+Clarity.init(projectId);
+
 import Hotjar from '@hotjar/browser';
 
 const siteId = 6513098;
