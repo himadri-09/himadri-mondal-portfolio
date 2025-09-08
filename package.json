@@ -20,6 +20,8 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@amplitude/analytics-browser": "^2.23.6",
+    "@amplitude/plugin-session-replay-browser": "^1.22.11",
     "@hookform/resolvers": "^3.9.0",
     "@hotjar/browser": "^1.0.9",
     "@microsoft/clarity": "^1.0.0",

@@ -5,6 +5,12 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { experiences, education } from "@/data/portfolio-data";
 
+import * as amplitude from '@amplitude/analytics-browser';
+import { sessionReplayPlugin } from '@amplitude/plugin-session-replay-browser';
+
+amplitude.add(sessionReplayPlugin());
+amplitude.init('a83833d0e1fad5e998d87599ac9cdbfe', {"autocapture":{"attribution":true,"fileDownloads":true,"formInteractions":true,"pageViews":true,"sessions":true,"elementInteractions":true,"networkTracking":true,"webVitals":true,"frustrationInteractions":true}});
+
 import Clarity from '@microsoft/clarity';
 const projectId = "t74xpz3k3l";
 
