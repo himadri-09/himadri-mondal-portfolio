@@ -8,7 +8,9 @@ import ContactSection from "@/components/ContactSection";
 import * as amplitude from '@amplitude/analytics-browser';
 import { sessionReplayPlugin } from '@amplitude/plugin-session-replay-browser';
 
-amplitude.add(sessionReplayPlugin());
+ // Create and Install Session Replay Plugin
+const sessionReplayTracking = sessionReplayPlugin();
+amplitude.add(sessionReplayTracking);
 amplitude.init('a83833d0e1fad5e998d87599ac9cdbfe', {"autocapture":{"attribution":true,"fileDownloads":true,"formInteractions":true,"pageViews":true,"sessions":true,"elementInteractions":true,"networkTracking":true,"webVitals":true,"frustrationInteractions":true}});
 
 import Clarity from '@microsoft/clarity';
