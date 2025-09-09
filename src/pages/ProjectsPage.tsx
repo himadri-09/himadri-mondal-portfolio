@@ -144,7 +144,9 @@ const ProjectsPage = () => {
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
           <Button asChild className="bg-primary hover:bg-primary-600">
-            <Link to="/contact">Get In Touch</Link>
+            <Link to="/contact"
+            onClick={() => amplitude.track('Get In Touch Clicked')}
+            >Get In Touch</Link>
           </Button>
         </div>
       </div>
